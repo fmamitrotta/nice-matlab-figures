@@ -230,7 +230,7 @@ if isprop(specStruct.targetAxes,'ZMinorTick')
 end
 
 %% Set colorbar properties
-cObject = findall(gcf,'type','ColorBar');
+cObject = get(ancestor(specStruct.targetAxes,'axes'),'Colorbar');
 if ~isempty(cObject)
     set(cObject,'Color',[.3 .3 .3])
     set(cObject.Label,...
